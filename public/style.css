@@ -1254,4 +1254,30 @@ button {
         margin-bottom: 0; } }
 
 body {
-  background-color: grey; }
+  background-color: grey;
+  font-family: 'Merriweather', serif; }
+
+header {
+  background-color: black;
+  color: white;
+  padding: 20px 0; }
+  header h1 {
+    margin: 0;
+    font-size: 3em;
+    text-align: center; }
+  header div {
+    text-align: center; }
+    header div h2 {
+      font-size: 0.9em;
+      text-align: center;
+      display: inline-block; }
+  header nav {
+    background-color: darkgrey;
+    padding: 10px; }
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center; }
+  footer a:link {
+    text-decoration: none; }

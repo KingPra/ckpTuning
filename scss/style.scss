@@ -6,4 +6,42 @@
 
 body {
     background-color: grey;
+    font-family: 'Merriweather', serif;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    
+    h1 {
+        margin: 0;
+        font-size: 3em;
+        text-align: center;
+    }
+
+    div {
+        text-align: center;
+
+        h2 {
+        font-size: 0.9em;
+        text-align: center;
+        display: inline-block;
+        }
+    }
+
+    nav {
+        background-color: darkgrey;
+        padding: 10px;
+    }
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+
+    a:link {
+    text-decoration: none;
+    }
 }
