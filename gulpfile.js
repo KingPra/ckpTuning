@@ -45,5 +45,6 @@
   gulp.watch('*.html',['html']); //watches all html files
   gulp.watch('scss/*.scss', ['css']);
   gulp.watch('js/*/*.js', ['js']);
+  gulp.watch('js/*.js', ['js']);
   gulp.watch('images/*', ['images']);
 });

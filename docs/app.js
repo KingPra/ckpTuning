@@ -1,49 +1,57 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+const app = angular.module('ShopApp', ['ui.router']);
 
-window.addEventListener('load', function () {
 
-    // Put this anywhere; normal scope rules will apply
-let testModule = require('./module'); // import module
+app.config(function ($stateProvider) {
+    // $stateProvider is the object we add routes ('states') to.
+    $stateProvider.state({
+        name: 'home',
+        url: '/home',
+        component: 'home',
+    });
 
-//importing object team. 'new' for constructor. - need to look up more info.
-// new testModule.Team();
-
-    console.log('ready to rock');
+    $stateProvider.state({
+        name: 'dyno',
+        url: '/dyno',
+        component: 'dyno',
+    });
+    // ...we can set up any number of states
 });
-},{"./module":2}],2:[function(require,module,exports){
-/**
- *  Most commonly, we'll either export functions or objects
- */
 
-// // option 1
-// function xyz() {
-//     return 10;
-// }
+// Each one of these represents a 'view' on the page.
+app.controller('HomeController', function () {
+});
 
+// $routeParams - parameters provided by the router
+// ^ provided by ui-router, have to use this name
+// $stateParams is used whenever we need to get information from the route 
+app.controller('DynoController', function () {
+    // Why person_id? 
+    // Note: need to parseInt - these will be strings by default
+});
 
-// module.exports = xyz;
+/* Defining a component */
+app.component('home', {
+    controller: 'HomeController',
+    templateUrl: 'templates/home.html',
+});
 
-// //option 2
-// module.exports = function xyz() {
-//     return 10;
-// }
+app.component('dyno', {
+    controller: 'DynoController',
+    templateUrl: 'templates/dyno.html',
+});
 
-//option 3
-module.exports = function () {
-    return 10;
-}
-
-
-//objects 
-// module.exports = {
-//     Team: function () {
-
+// app.component('friendSummary', {
+//     templateUrl: 'templates/summary.html',
+//     bindings: {
+//         person: '<',
+//         whenIClick: '&', // functions are &
 //     },
-//     Player: function () {
+// });
 
-//     },
-//     Flag: function () {
+app.factory('NuggetService', function () {
+    return {
+    };
+});
 
-//     },
-// };
 },{}]},{},[1]);

@@ -13,7 +13,7 @@
         <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
         <script src="docs/app.js"></script>
     </head>
-    <body>
+    <body ng-app="ShopApp">
         <header>
             <h1>CKP Tuning</h1>
             <div>
@@ -24,25 +24,12 @@
             <a href="#"><img src="docs/images/002-thumb.png" alt="logo"> </a>
             <a href="http://www.instagram.com/customkings_performance" target="_blank"><img src="docs/images/003-social-media.png" alt="instagram logo, ckp tuning"> </a>
             <nav>
-                <a href="#">Home</a>
-                <a href="#">Pre-Dyno Checklist</a>
+                <a ui-sref="home">Home</a>
+                <a ui-sref="dyno">Pre-Dyno Checklist</a>
                 <a href="#">Schedule</a>
             </nav>
+            <ui-view></ui-view>
         </header>
-        <section>
-            <p>Hours of Operation</p>
-            <p>Tues-Sat: 9am-6pm</p>
-            <p>Sat by appt. only</p>
-        </section>
-        <section>
-            <p>Cost of Tunes</p>
-            <p>Crome(Gold) All Motor: $250/ Forced Induction: $350</p>
-            <p>Cobb All Motor: $350/ Forced Induction: $450</p>
-            <p>Hondata All Motor: $350/ Forced Induction: $450</p>
-            <p>AEM All Motor: $400/ Forced Induction: $500</p>
-            <p>Halltech All Motor: $400/ Forced Induction $500</p>
-        </section>
-        </section>
         <footer>&#169 2017 CKPTuning All Rights Reserved | Website by <a href="#">King Pra</a></footer>
     </body>
 </html>
