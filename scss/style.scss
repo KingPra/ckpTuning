@@ -13,26 +13,29 @@ header {
     background-color: black;
     color: white;
     padding: 20px 0;
-    
-    h1 {
-        margin: 0;
-        font-size: 3.5em;
-        text-align: center;
-    }
-
-    div {
-        text-align: center;
-
+        
         h2 {
         font-size: 0.9em;
         text-align: center;
         display: inline-block;
         }
-    }
-
+    
     nav {
         background-color: darkgrey;
         padding: 10px;
+    }
+}
+
+.head-display {
+    display: inline-flex;
+}
+
+#home {
+    height: 100vh;
+    text-align: center;
+    p {
+        font-size: 2em;
+        margin: 0;
     }
 }
 

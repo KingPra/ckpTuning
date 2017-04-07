@@ -1261,19 +1261,23 @@ header {
   background-color: black;
   color: white;
   padding: 20px 0; }
-  header h1 {
-    margin: 0;
-    font-size: 3.5em;
-    text-align: center; }
-  header div {
-    text-align: center; }
-    header div h2 {
-      font-size: 0.9em;
-      text-align: center;
-      display: inline-block; }
+  header h2 {
+    font-size: 0.9em;
+    text-align: center;
+    display: inline-block; }
   header nav {
     background-color: darkgrey;
     padding: 10px; }
+
+.head-display {
+  display: inline-flex; }
+
+#home {
+  height: 100vh;
+  text-align: center; }
+  #home p {
+    font-size: 2em;
+    margin: 0; }
 
 footer {
   background-color: black;
