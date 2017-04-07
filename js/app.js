@@ -1,4 +1,4 @@
-const app = angular.module('ShopApp', ['ui.router']);
+const app = angular.module('ShopApp', ['ui.router', 'ngMaterial']);
 
 
 app.config(function ($stateProvider) {
@@ -22,4 +22,12 @@ app.component('home', {
 
 app.component('dyno', {
     templateUrl: 'templates/dyno.html',
+});
+
+(function() {
+  'use strict';
+
+   $rootScope.$on('$routeChangeSuccess', function(event, current) {
+     $scope.currentLink = getCurrentLinkFromRoute(current);
+   });
 });

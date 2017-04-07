@@ -12,23 +12,33 @@
         <script src="https://npmcdn.com/angular-ui-router@1.0.0-beta.3/release/angular-ui-router.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+                <!-- Angular Material style sheet -->
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+
+                <!-- Angular Material requires Angular.js Libraries -->
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>-->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+        <!-- Angular Material Library -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
         <script src="docs/app.js"></script>
     </head>
     <body ng-app="ShopApp">
         <header>
-            <nav>
-                <h1 class="name">CKP Tuning</h1>
-                <div class="menu">
-                <a ui-sref="home" class="menu-list">Home</a>
-                <a ui-sref="dyno" class="menu-list">Dyno</a>
-                <a href="#" class="menu-list">Schedule</a>
-                </div>
+            <h1 class="name">CKP Tuning</h1>
+            <md-nav-bar md-selected-nav-item="currentNavItem" class="menu">
+            <md-nav-item md-nav-click="goto('home')" name="home"> <a ui-sref="home" class="menu-list">Home</a></md-nav-item>
+            <md-nav-item md-nav-click="goto('dyno')" name="dyno"> <a ui-sref="dyno" class="menu-list">Dyno</a></md-nav-item>
+            <md-nav-item md-nav-click="goto('schedule')" name="schedule"><a href="#" class="menu-list">Schedule</a></md-nav-item>
+            </md-nav-bar>
                 <div class="social">
                     <a href="#" target="_blank"><img src="docs/images/001-note.png" alt="logo" class="social-logo"> </a>
                     <a href="https://www.facebook.com/ckptuning" target="_blank"><img src="docs/images/002-thumb.png" alt="logo" class="social-logo"> </a>
                     <a href="http://www.instagram.com/customkings_performance" target="_blank"><img src="docs/images/003-social-media.png" alt="instagram logo, ckp tuning" class="social-logo"> </a>
                 </div>
-            </nav>
             <ui-view></ui-view>
         </header>
         <footer>&#169 2017 CKPTuning All Rights Reserved | Website by <a href="#">King Pra</a></footer>
