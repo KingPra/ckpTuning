@@ -22,12 +22,35 @@ header {
     
     nav {
         background-color: darkgrey;
-        padding: 10px;
-    }
-}
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows: 1;
 
-.head-display {
-    display: inline-flex;
+            .name {
+                text-align: left;
+                grid-column: 1;
+                grid-row: 1;
+                margin: 0;
+            }
+
+            .menu{
+                grid-column: 2;
+                grid-row: 1;
+                text-align: center;
+                margin: auto 0;
+            }
+            .social{
+                grid-column: 3;
+                grid-row: 1;
+                text-align: right
+            }
+            .menu-list{
+                text-decoration: none;
+                justify-content: center;
+            }
+    }
+    
+ 
 }
 
 #home {

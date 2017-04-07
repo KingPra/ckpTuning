@@ -1267,10 +1267,26 @@ header {
     display: inline-block; }
   header nav {
     background-color: darkgrey;
-    padding: 10px; }
-
-.head-display {
-  display: inline-flex; }
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 1; }
+    header nav .name {
+      text-align: left;
+      grid-column: 1;
+      grid-row: 1;
+      margin: 0; }
+    header nav .menu {
+      grid-column: 2;
+      grid-row: 1;
+      text-align: center;
+      margin: auto 0; }
+    header nav .social {
+      grid-column: 3;
+      grid-row: 1;
+      text-align: right; }
+    header nav .menu-list {
+      text-decoration: none;
+      justify-content: center; }
 
 #home {
   height: 100vh;
