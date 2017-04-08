@@ -6,7 +6,7 @@ app.config(function ($stateProvider) {
     // $stateProvider is the object we add routes ('states') to.
     $stateProvider.state({
         name: 'home',
-        url: '/home',
+        url: '',
         component: 'home',
     });
 
