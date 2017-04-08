@@ -1303,9 +1303,14 @@ header {
     margin: 0; }
 
 #checklist {
-  margin: auto 200px; }
+  margin: auto 200px;
+  padding: 50px 100px; }
   #checklist ul {
     list-style: none; }
+
+#dyno-title {
+  text-align: center;
+  font-size: 2em; }
 
 footer {
   background-color: black;

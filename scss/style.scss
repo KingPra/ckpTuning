@@ -70,9 +70,15 @@ header {
 
 #checklist {
     margin: auto 200px;
+    padding: 50px 100px;
     ul {
     list-style: none;
     }
+}
+
+#dyno-title {
+    text-align: center;
+    font-size: 2em;
 }
 
 footer {
