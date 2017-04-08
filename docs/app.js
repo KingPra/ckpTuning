@@ -17,19 +17,16 @@ app.config(function ($stateProvider) {
     });
 });
 
+app.controller('HomeCtrl', ($scope) => {
+    $scope.currentNavItem ='home';
+});
+
 app.component('home', {
+    controller: 'HomeCtrl',
     templateUrl: 'templates/home.html',
 });
 
 app.component('dyno', {
     templateUrl: 'templates/dyno.html',
-});
-
-(function() {
-  'use strict';
-
-   $rootScope.$on('$routeChangeSuccess', function(event, current) {
-     $scope.currentLink = getCurrentLinkFromRoute(current);
-   });
 });
 },{}]},{},[1]);

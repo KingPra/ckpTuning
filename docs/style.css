@@ -1272,9 +1272,8 @@ header {
     header nav .name {
       text-align: left;
       grid-column: 1;
-      grid-row: 1;
-      margin: 0;
-      padding-left: 20%; }
+      padding-left: 20%;
+      margin: 10px auto; }
     header nav .menu {
       grid-column: 2;
       grid-row: 1;
@@ -1302,6 +1301,11 @@ header {
   #home p {
     font-size: 2em;
     margin: 0; }
+
+#checklist {
+  margin: auto 200px; }
+  #checklist ul {
+    list-style: none; }
 
 footer {
   background-color: black;
