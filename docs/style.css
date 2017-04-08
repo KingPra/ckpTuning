@@ -1313,3 +1313,15 @@ footer {
   text-align: center; }
   footer a:link {
     text-decoration: none; }
+
+main {
+  /* start 'enter' transition */
+  /* end 'enter' transition */ }
+  main.ng-enter {
+    /* transition on enter for .5s */
+    transition: .9s;
+    /* start with opacity 0 (invisible) */
+    opacity: 0; }
+  main.ng-enter-active {
+    /* end with opacity 1 (fade in) */
+    opacity: 1; }

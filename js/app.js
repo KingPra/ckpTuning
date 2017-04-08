@@ -1,4 +1,4 @@
-const app = angular.module('ShopApp', ['ui.router', 'ngMaterial']);
+const app = angular.module('ShopApp', ['ui.router', 'ngMaterial', 'ngAnimate']);
 
 
 app.config(function ($stateProvider) {
