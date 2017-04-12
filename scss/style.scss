@@ -4,112 +4,85 @@
 @include foundation-global-styles;
 @include foundation-grid;
 
-$med_screen: 600px;
+$small_screen: 600px;
+$med_screen: 700px;
 
 body {
     background-color: grey;
     font-family: 'Merriweather', serif;
 }
 
-
-
-header {
-    @include grid-row();
-    background-color: black;
-    color: white;
-        
-        h2 {  
-        font-size: 0.9em;
-        text-align: center;
-        display: inline-block;
-        }
-    
-    nav {
-        @include grid-column(12);
-        display: none;
-        @include breakpoint(large) {
-            background-color: darkgrey;
-            display: grid;
-            grid-template-columns: 20% 60% 20%;
-            grid-template-rows: 1;
-
-                .name {
-                    text-align: left;
-                    grid-column: 1;
-                    padding-left: 20%;
-                    margin: 10px auto;
-                }
-
-                .menu{
-                    grid-column: 2;
-                    grid-row: 1;
-                    margin: auto;
-                }
-                .social{
-                    grid-column: 3;
-                    grid-row: 1;
-                    text-align: right;
-                    margin: auto 0;
-                    padding-right: 20%;
-                }
-                .menu-list{
-                    text-decoration: none;
-                    justify-content: center;
-                    font-size: 1.5em;
-                    padding: 5px;
-                    margin: 0;
-                    color: white;
-                }
-                .social-logo{
-                    padding: 5px;
-                }
-        }
+.header {
+    @include grid-column(6);
+    font-size: 1.7em;
+    text-align: left;
+    padding-left: 10px;
+    display: block;
+    margin: 0;
+    padding: 10px 10px;
+    @include breakpoint(large) {
+        @include grid-column(4);
+        text-align: left;
+        display: block;
+        margin: 10px 0;
     }
+}
+.menu {
+    display: none;
+    @include breakpoint(large) {
+        @include grid-column(4);
+        text-align: center;
+        display: block;
+    }
+
+}
+
+.mobile-menu {
+    @include grid-column(6);
+    text-align: right;
+    @include breakpoint(medium) {
+        display: none;
+    }
+}
+
+.social {
+    display: none;
+    @include breakpoint(large) {
+        @include grid-column(4);
+        text-align: right;
+        display: block;
+    }
+
 }
 
 #home {
-    height: 100vh;
+  @include breakpoint(small) {
+    @include grid-column(12);
     text-align: center;
-    margin-top: 100px;
-    p {
-        font-size: 2em;
-        margin: 0;
-    }
-}
-
-#checklist {
-    margin: auto 200px;
-    padding: 50px 100px;
-    ul {
-    list-style: none;
-    }
-}
-
-#dyno-title {
-    text-align: center;
-    font-size: 2em;
+  }
 }
 
 footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-
-    a:link {
-    text-decoration: none;
+    @include breakpoint(small) {
+      @include grid-column(12);
+        text-align: center;
+        font-size: .6em;
+    }
+    @include breakpoint(medium) {
+        text-align: center;
+        font-size: 1em;
     }
 }
-
 main {
     /* start 'enter' transition */
     &.ng-enter {
         /* transition on enter for .5s */
         transition: .9s;
- 
+
         /* start with opacity 0 (invisible) */
         opacity: 0;
     }
- 
+
     /* end 'enter' transition */
     &.ng-enter-active {
         /* end with opacity 1 (fade in) */
@@ -130,7 +103,7 @@ main {
 //     transform: translate3d(0, 0, 0);
 //   }
 //   &.ng-leave-active {
-//     transform: translate3d(-100%, 0, 0);  
+//     transform: translate3d(-100%, 0, 0);
 //   }
 // }
 
