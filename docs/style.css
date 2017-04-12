@@ -1254,7 +1254,7 @@ button {
         margin-bottom: 0; } }
 
 body {
-  background-color: grey;
+  background-color: black;
   font-family: 'Merriweather', serif; }
 
 .header {
@@ -1262,12 +1262,7 @@ body {
   float: left;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
-  font-size: 1.7em;
-  text-align: left;
-  padding-left: 10px;
-  display: block;
-  margin: 0;
-  padding: 10px 10px; }
+  display: none; }
   @media print, screen and (min-width: 40em) {
     .header {
       padding-right: 0.9375rem;
@@ -1280,6 +1275,7 @@ body {
       float: left;
       padding-right: 0.625rem;
       padding-left: 0.625rem;
+      display: block;
       text-align: left;
       display: block;
       margin: 10px 0; } }
@@ -1290,6 +1286,21 @@ body {
   @media print, screen and (min-width: 64em) {
       .header:last-child:not(:first-child) {
         float: right; } }
+
+#header-logo {
+  width: 16.66667%;
+  float: left;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem; }
+  @media print, screen and (min-width: 40em) {
+    #header-logo {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  #header-logo:last-child:not(:first-child) {
+    float: right; }
+  @media print, screen and (min-width: 64em) {
+    #header-logo {
+      display: none; } }
 
 .menu {
   display: none; }
@@ -1310,7 +1321,7 @@ body {
         float: right; } }
 
 .mobile-menu {
-  width: 50%;
+  width: 83.33333%;
   float: left;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
@@ -1348,7 +1359,11 @@ body {
   float: left;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
-  text-align: center; }
+  text-align: center;
+  background-color: grey;
+  color: white;
+  font-size: 1.5em;
+  height: 100vh; }
   @media print, screen and (min-width: 40em) {
     #home {
       padding-right: 0.9375rem;
