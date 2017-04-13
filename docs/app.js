@@ -3,7 +3,6 @@ const app = angular.module('ShopApp', ['ui.router', 'ngMaterial', 'ngAnimate']);
 
 
 app.config(function ($stateProvider) {
-    // $stateProvider is the object we add routes ('states') to.
     $stateProvider.state({
         name: 'home',
         url: '',
