@@ -6,7 +6,7 @@ $small_screen: 600px;
 $med_screen: 700px;
 
 body {
-    background-color: black;
+    background-color: #000000;
     font-family: 'Merriweather', serif;
 }
 
@@ -21,18 +21,18 @@ body {
         text-align: left;
         display: block;
         margin: 10px 0;
-        color: white;
+        color: #ffffff;
     }
 }
 
 md-nav-bar .md-button._md-nav-button.md-unselected {
-    color: white;
+    color: #ffffff;
 }
 
 #header-logo {
     @include breakpoint(small) {
          @include grid-column(2);
-        color: white;
+        color: #ffffff;
         margin: 0;
     }
     @include breakpoint(large) {
@@ -77,8 +77,8 @@ md-nav-bar .md-button._md-nav-button.md-unselected {
     @include breakpoint(small) {
          @include grid-column(12);
         text-align: center;
-        background-color: grey;
-        color: white;
+        background-color: #808080;
+        color: #ffffff;
         font-size: 1.5em;
         height: 100vh;
     }
@@ -86,7 +86,7 @@ md-nav-bar .md-button._md-nav-button.md-unselected {
 
 #dyno {
     @include breakpoint(small) {
-         @include grid-column(12) background-color: grey;
+         @include grid-column(12) background-color: #808080;
     }
 
     ul {
@@ -115,14 +115,11 @@ footer {
 main {
     /* start 'enter' transition */
     &.ng-enter {
-        /* transition on enter for .5s */
         transition: 0.9s;
-        /* start with opacity 0 (invisible) */
         opacity: 0;
     }
     /* end 'enter' transition */
     &.ng-enter-active {
-        /* end with opacity 1 (fade in) */
         opacity: 1;
     }
 }
