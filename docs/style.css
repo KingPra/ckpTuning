@@ -1425,7 +1425,6 @@ footer {
     float: right; }
   @media print, screen and (min-width: 40em) {
     footer {
-      background-color: grey;
       text-align: center;
       font-size: 1em; } }
 

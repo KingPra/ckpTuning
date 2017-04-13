@@ -9,7 +9,8 @@
   const gulp = require('gulp');
   const sass = require('gulp-sass');
   const browser = require('gulp-browser');
-  const imagemin = require('gulp-imagemin')
+  const imagemin = require('gulp-imagemin');
+  const strip = require('gulp-strip-comments');
 
   // Step 2: create default tasks
   gulp.task('default', ['html', 'css', 'js', 'images']);
@@ -17,14 +18,16 @@
   // Step 3: create subtasks
   gulp.task('html', () => {
       return gulp.src('index.html')
+        .pipe(strip())
         .pipe(gulp.dest('docs/'));
   });
 
   gulp.task('css', () => {
       // Convert style.scss into style.css
-      // Copy to docs/ 
+      // Copy to docs/
       return gulp.src('scss/style.scss')
         .pipe(sass()) // requires gulp-sass
+        .pipe(strip())
         .pipe(gulp.dest('docs/'));
   });
 
@@ -32,6 +35,7 @@
       // Copy js file into docs/
       return gulp.src('js/app.js')
         .pipe(browser.browserify()) // makes require work
+        .pipe(strip())
         .pipe(gulp.dest('docs/'));
   });
 
