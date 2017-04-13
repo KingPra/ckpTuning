@@ -12,13 +12,13 @@ body {
 header {
     background-color: black;
     color: white;
-        
+
         h2 {
         font-size: 0.9em;
         text-align: center;
         display: inline-block;
         }
-    
+
     nav {
         background-color: darkgrey;
         display: grid;
@@ -91,54 +91,57 @@ footer {
     }
 }
 
-main {
-    /* start 'enter' transition */
-    &.ng-enter {
-        /* transition on enter for .5s */
-        transition: .9s;
- 
-        /* start with opacity 0 (invisible) */
-        opacity: 0;
-    }
- 
-    /* end 'enter' transition */
-    &.ng-enter-active {
-        /* end with opacity 1 (fade in) */
-        opacity: 1;
-    }
-}
-//transition animation
-// .scrolled {
-//   transition: transform $duration ease;
-//   transform: translate3d(0, 0, 0);
-//   &.ng-enter {
-//     transform: translate3d(100%, 0, 0);  // Move to the right (up to 100% of width)
-//   }
-//   &.ng-enter-active {
-//     transform: translate3d(0, 0, 0);
-//   }
-//   &.ng-leave {
-//     transform: translate3d(0, 0, 0);
-//   }
-//   &.ng-leave-active {
-//     transform: translate3d(-100%, 0, 0);  
-//   }
+// main {
+//     /* start 'enter' transition */
+//     &.ng-enter {
+//         /* transition on enter for .5s */
+//         transition: .9s;
+//         transform: translate3d(100%, 0, 0);
+//
+//         /* start with opacity 0 (invisible) */
+//         opacity: 0;
+//     }
+//
+//     /* end 'enter' transition */
+//     &.ng-enter-active {
+//         /* end with opacity 1 (fade in) */
+//         opacity: 1;
+//     }
 // }
 
-// //transition animation for going back
-// .backward {
-//   .scrolled {
-//     &.ng-enter {
-//         transform: translate3d(-100%, 0, 0);
-//     }
-//     &.ng-enter-active {
-//         transform: translate3d(0, 0, 0);
-//     }
-//     &.ng-leave {
-//         transform: translate3d(0, 0, 0);
-//     }
-//     &.ng-leave-active {
-//         transform: translate3d(100%, 0, 0);
-//     }
-//   }
-// }
+main {
+  .scrolled {
+    // transition: transform $duration ease;
+    transform: translate3d(0, 0, 0);
+    &.ng-enter {
+      transform: translate3d(100%, 0, 0);  // Move to the right (up to 100% of width)
+    }
+    &.ng-enter-active {
+      transform: translate3d(0, 0, 0);
+    }
+    &.ng-leave {
+      transform: translate3d(0, 0, 0);
+    }
+    &.ng-leave-active {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+
+  //transition animation for going back
+  .backward {
+    .scrolled {
+      &.ng-enter {
+          transform: translate3d(-100%, 0, 0);
+      }
+      &.ng-enter-active {
+          transform: translate3d(0, 0, 0);
+      }
+      &.ng-leave {
+          transform: translate3d(0, 0, 0);
+      }
+      &.ng-leave-active {
+          transform: translate3d(100%, 0, 0);
+      }
+    }
+  }
+}

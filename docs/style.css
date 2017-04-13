@@ -1319,14 +1319,25 @@ footer {
   footer a:link {
     text-decoration: none; }
 
-main {
-  /* start 'enter' transition */
-  /* end 'enter' transition */ }
-  main.ng-enter {
-    /* transition on enter for .5s */
-    transition: .9s;
-    /* start with opacity 0 (invisible) */
-    opacity: 0; }
-  main.ng-enter-active {
-    /* end with opacity 1 (fade in) */
-    opacity: 1; }
+main .scrolled {
+  transform: translate3d(0, 0, 0); }
+  main .scrolled.ng-enter {
+    transform: translate3d(100%, 0, 0); }
+  main .scrolled.ng-enter-active {
+    transform: translate3d(0, 0, 0); }
+  main .scrolled.ng-leave {
+    transform: translate3d(0, 0, 0); }
+  main .scrolled.ng-leave-active {
+    transform: translate3d(-100%, 0, 0); }
+
+main .backward .scrolled.ng-enter {
+  transform: translate3d(-100%, 0, 0); }
+
+main .backward .scrolled.ng-enter-active {
+  transform: translate3d(0, 0, 0); }
+
+main .backward .scrolled.ng-leave {
+  transform: translate3d(0, 0, 0); }
+
+main .backward .scrolled.ng-leave-active {
+  transform: translate3d(100%, 0, 0); }
