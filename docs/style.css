@@ -1295,7 +1295,9 @@ md-nav-bar .md-button._md-nav-button.md-unselected {
   width: 16.66667%;
   float: left;
   padding-right: 0.625rem;
-  padding-left: 0.625rem; }
+  padding-left: 0.625rem;
+  color: white;
+  margin: 0; }
   @media print, screen and (min-width: 40em) {
     #header-logo {
       padding-right: 0.9375rem;
@@ -1342,7 +1344,8 @@ md-nav-bar .md-button._md-nav-button.md-unselected {
   width: 83.33333%;
   float: left;
   padding-right: 0.625rem;
-  padding-left: 0.625rem; }
+  padding-left: 0.625rem;
+  text-align: right; }
   @media print, screen and (min-width: 40em) {
     .mobile-menu {
       padding-right: 0.9375rem;

@@ -35,6 +35,8 @@ md-nav-bar .md-button._md-nav-button.md-unselected {
 #header-logo {
   @include breakpoint(small){
     @include grid-column(2);
+    color: white;
+    margin: 0;
   }
     @include breakpoint(large) {
       display: none;
@@ -57,6 +59,7 @@ md-nav-bar .md-button._md-nav-button.md-unselected {
 .mobile-menu {
     @include breakpoint(small) {
     @include grid-column(10);
+      text-align: right;
   }
     @include breakpoint(medium) {
         display: none;
