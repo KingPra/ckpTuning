@@ -1,9 +1,7 @@
 /* Include Foundation */
 @import 'node_modules/foundation-sites/scss/foundation';
-
 @include foundation-global-styles;
 @include foundation-grid;
-
 $small_screen: 600px;
 $med_screen: 700px;
 
@@ -14,12 +12,11 @@ body {
 
 .header {
     @include breakpoint(small) {
-      @include grid-column(6);
-      display: none;
+         @include grid-column(6);
+        display: none;
     }
-
     @include breakpoint(large) {
-        @include grid-column(4);
+         @include grid-column(4);
         display: block;
         text-align: left;
         display: block;
@@ -29,38 +26,38 @@ body {
 }
 
 md-nav-bar .md-button._md-nav-button.md-unselected {
-  color: white;
+    color: white;
 }
 
 #header-logo {
-  @include breakpoint(small){
-    @include grid-column(2);
-    color: white;
-    margin: 0;
-  }
+    @include breakpoint(small) {
+         @include grid-column(2);
+        color: white;
+        margin: 0;
+    }
     @include breakpoint(large) {
-      display: none;
+        display: none;
     }
 }
+
 .menu {
     display: none;
     @include breakpoint(medium) {
-        @include grid-column(8);
+         @include grid-column(8);
         text-align: right;
         display: block;
     }
     @include breakpoint(large) {
-      @include grid-column(4);
-      text-align: right;
+         @include grid-column(4);
+        text-align: right;
     }
-
 }
 
 .mobile-menu {
     @include breakpoint(small) {
-    @include grid-column(10);
-      text-align: right;
-  }
+         @include grid-column(10);
+        text-align: right;
+    }
     @include breakpoint(medium) {
         display: none;
     }
@@ -69,63 +66,60 @@ md-nav-bar .md-button._md-nav-button.md-unselected {
 .social {
     display: none;
     @include breakpoint(large) {
-        @include grid-column(4);
+         @include grid-column(4);
         text-align: right;
         display: block;
         margin-top: 15px;
     }
-
 }
 
 #home {
-  @include breakpoint(small) {
-    @include grid-column(12);
-    text-align: center;
-    background-color: grey;
-    color: white;
-    font-size: 1.5em;
-    height: 100vh;
-  }
+    @include breakpoint(small) {
+         @include grid-column(12);
+        text-align: center;
+        background-color: grey;
+        color: white;
+        font-size: 1.5em;
+        height: 100vh;
+    }
 }
 
-#dyno{
-  @include breakpoint(small) {
-    @include grid-column(12)
-    background-color: grey;
-  }
+#dyno {
+    @include breakpoint(small) {
+         @include grid-column(12) background-color: grey;
+    }
 
-
-  ul {
-    list-style: none;
-  }
+    ul {
+        list-style: none;
+    }
 }
 
 #summary {
-      @include breakpoint(small) {
-      margin: 20px;
-      }
+    @include breakpoint(small) {
+        margin: 20px;
+    }
 }
+
 footer {
     @include breakpoint(small) {
-      @include grid-column(12);
+         @include grid-column(12);
         text-align: center;
-        font-size: .6em;
+        font-size: 0.6em;
     }
     @include breakpoint(medium) {
         text-align: center;
         font-size: 1em;
     }
 }
+
 main {
     /* start 'enter' transition */
     &.ng-enter {
         /* transition on enter for .5s */
-        transition: .9s;
-
+        transition: 0.9s;
         /* start with opacity 0 (invisible) */
         opacity: 0;
     }
-
     /* end 'enter' transition */
     &.ng-enter-active {
         /* end with opacity 1 (fade in) */
