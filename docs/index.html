@@ -58,14 +58,15 @@
                 <md-nav-item  ng-class="{active: currentState.match('^home')}" md-nav-sref="home" name="home" class="menu-list" aria-label="home">Home</md-nav-item>
                 <md-nav-item ng-class="{active: currentState.match('^dyno')}" md-nav-sref="dyno" class="menu-list" name="dyno" aria-label="dyno">Dyno</md-nav-item>
                 </md-nav-bar>
-                <div class="social">
-                    <a href="#" target="_blank"><img src="docs/images/001-note.png" alt="logo" class="social-logo"> </a>
-                    <a href="https://www.facebook.com/ckptuning" target="_blank"><img src="docs/images/002-thumb.png" alt="logo" class="social-logo"> </a>
-                    <a href="http://www.instagram.com/customkings_performance" target="_blank"><img src="docs/images/003-social-media.png" alt="instagram logo, ckp tuning" class="social-logo"> </a>
-                </div>
             </nav>
         </header>
         <main ui-view></main>
-        <footer>&#169 2017 CKPTuning All Rights Reserved | Website by <a href="#">King Pra</a></footer>
+        <footer>&#169 2017 CKPTuning All Rights Reserved | Website by <a href="#">King Pra</a>
+          <div class="social">
+              <a href="#" target="_blank"><img src="docs/images/001-note.png" alt="logo" class="social-logo"> </a>
+              <a href="https://www.facebook.com/ckptuning" target="_blank"><img src="docs/images/002-thumb.png" alt="logo" class="social-logo"> </a>
+              <a href="http://www.instagram.com/customkings_performance" target="_blank"><img src="docs/images/003-social-media.png" alt="instagram logo, ckp tuning" class="social-logo"> </a>
+          </div>
+        </footer>
     </body>
 </html>

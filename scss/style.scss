@@ -24,7 +24,12 @@ body {
         text-align: left;
         display: block;
         margin: 10px 0;
+        color: white;
     }
+}
+
+md-nav-bar .md-button._md-nav-button.md-unselected {
+  color: white;
 }
 
 #header-logo {
@@ -37,9 +42,9 @@ body {
 }
 .menu {
     display: none;
-    @include breakpoint(large) {
-        @include grid-column(4);
-        text-align: center;
+    @include breakpoint(medium) {
+        @include grid-column(8);
+        text-align: right;
         display: block;
     }
 
@@ -48,7 +53,6 @@ body {
 .mobile-menu {
     @include breakpoint(small) {
     @include grid-column(10);
-
     text-align: right;
   }
     @include breakpoint(medium) {
@@ -77,6 +81,23 @@ body {
   }
 }
 
+#dyno{
+  @include breakpoint(small) {
+    @include grid-column(12)
+    background-color: grey;
+  }
+
+
+  ul {
+    list-style: none;
+  }
+}
+
+#summary {
+      @include breakpoint(small) {
+      margin: 20px;
+      }
+}
 footer {
     @include breakpoint(small) {
       @include grid-column(12);
@@ -84,6 +105,7 @@ footer {
         font-size: .6em;
     }
     @include breakpoint(medium) {
+        background-color: grey;
         text-align: center;
         font-size: 1em;
     }
