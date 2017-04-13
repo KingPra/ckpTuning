@@ -1254,7 +1254,7 @@ button {
         margin-bottom: 0; } }
 
 body {
-  background-color: black;
+  background-color: #000000;
   font-family: 'Merriweather', serif; }
 
 .header {
@@ -1279,7 +1279,7 @@ body {
       text-align: left;
       display: block;
       margin: 10px 0;
-      color: white; } }
+      color: #ffffff; } }
   @media print, screen and (min-width: 64em) and (min-width: 40em) {
     .header {
       padding-right: 0.9375rem;
@@ -1289,14 +1289,14 @@ body {
         float: right; } }
 
 md-nav-bar .md-button._md-nav-button.md-unselected {
-  color: white; }
+  color: #ffffff; }
 
 #header-logo {
   width: 16.66667%;
   float: left;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
-  color: white;
+  color: #ffffff;
   margin: 0; }
   @media print, screen and (min-width: 40em) {
     #header-logo {
@@ -1316,7 +1316,6 @@ md-nav-bar .md-button._md-nav-button.md-unselected {
       float: left;
       padding-right: 0.625rem;
       padding-left: 0.625rem;
-      text-align: right;
       display: block; } }
   @media print, screen and (min-width: 40em) and (min-width: 40em) {
     .menu {
@@ -1331,7 +1330,7 @@ md-nav-bar .md-button._md-nav-button.md-unselected {
       float: left;
       padding-right: 0.625rem;
       padding-left: 0.625rem;
-      text-align: right; } }
+      display: block; } }
   @media print, screen and (min-width: 64em) and (min-width: 40em) {
     .menu {
       padding-right: 0.9375rem;
@@ -1381,8 +1380,8 @@ md-nav-bar .md-button._md-nav-button.md-unselected {
   padding-right: 0.625rem;
   padding-left: 0.625rem;
   text-align: center;
-  background-color: grey;
-  color: white;
+  background-color: #808080;
+  color: #ffffff;
   font-size: 1.5em;
   height: 100vh; }
   @media print, screen and (min-width: 40em) {
@@ -1397,7 +1396,7 @@ md-nav-bar .md-button._md-nav-button.md-unselected {
   float: left;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
-  background-color: grey; }
+  background-color: #808080; }
   @media print, screen and (min-width: 40em) {
     #dyno {
       padding-right: 0.9375rem;
@@ -1416,7 +1415,7 @@ footer {
   padding-right: 0.625rem;
   padding-left: 0.625rem;
   text-align: center;
-  font-size: .6em; }
+  font-size: 0.6em; }
   @media print, screen and (min-width: 40em) {
     footer {
       padding-right: 0.9375rem;
@@ -1432,10 +1431,7 @@ main {
   /* start 'enter' transition */
   /* end 'enter' transition */ }
   main.ng-enter {
-    /* transition on enter for .5s */
-    transition: .9s;
-    /* start with opacity 0 (invisible) */
+    transition: 0.9s;
     opacity: 0; }
   main.ng-enter-active {
-    /* end with opacity 1 (fade in) */
     opacity: 1; }

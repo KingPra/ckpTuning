@@ -1,59 +1,65 @@
 <!doctype html>
 <html>
-    <head>
-        <title>CKP Tuning</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="docs/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-        <link rel="icon" type="image/ico" href="favicon.ico">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
-        <script src="https://npmcdn.com/angular-ui-router@1.0.0-beta.3/release/angular-ui-router.min.js"></script>
-        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
-        <script src="docs/app.js"></script>
-    </head>
 
-    <body ng-app="ShopApp" ng-cloak="">
-        <header>
-            <nav ng-controller="HomeCtrl">
-                <h1 class="header">CKP Tuning</h1>
-                <h1 id="header-logo">CKP</h1>
-                 <md-menu-bar class="mobile-menu">
-                  <md-menu>
+<head>
+    <title>CKP Tuning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="docs/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="https://npmcdn.com/angular-ui-router@1.0.0-beta.3/release/angular-ui-router.min.js"></script>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="docs/app.js"></script>
+</head>
+
+<body ng-app="ShopApp" ng-cloak="">
+    <header>
+        <nav ng-controller="HomeCtrl">
+            <h1 class="header">CKP Tuning</h1>
+            <h1 id="header-logo">CKP</h1>
+            <md-menu-bar class="mobile-menu">
+                <md-menu>
                     <button class="md-button md-raised md-default" ng-click="$mdOpenMenu()">
                       Menu
                     </button>
                     <md-menu-content>
-                      <md-menu-item>
-                          <md-button ui-sref="home">Home</md-button>
-                          <md-menu-content>
-                      </md-menu-item>
-                      <md-menu-item>
-                        <md-menu>
-                          <md-button ng-click="$mdOpenMenu()">Dyno</md-button>
-                          <md-menu-content>
-                            <md-menu-item><md-button ui-sref="dyno">Pre-Dyno Checklist</md-button></md-menu-item>
-                            <md-menu-item><md-button>Dyno Prices</md-button></md-menu-item>
-                          </md-menu-content>
-                        </md-menu>
-                      </md-menu-item>
-                      </md-menu-content>
-                    </md-menu>
-                  </md-menu-bar>
-                <md-nav-bar md-selected-nav-item="currentNavItem" class="menu" nav-bar-aria-label="navigation">
-                <md-nav-item  ng-class="{active: currentState.match('^home')}" md-nav-sref="home" name="home" class="menu-list" aria-label="home">Home</md-nav-item>
+                        <md-menu-item>
+                            <md-button ui-sref="home">Home</md-button>
+                            <md-menu-content>
+                        </md-menu-item>
+                        <md-menu-item>
+                            <md-menu>
+                                <md-button ng-click="$mdOpenMenu()">Dyno</md-button>
+                                <md-menu-content>
+                                    <md-menu-item>
+                                        <md-button ui-sref="dyno">Pre-Dyno Checklist</md-button>
+                                    </md-menu-item>
+                                    <md-menu-item>
+                                        <md-button>Dyno Prices</md-button>
+                                    </md-menu-item>
+                                </md-menu-content>
+                            </md-menu>
+                        </md-menu-item>
+                        </md-menu-content>
+                </md-menu>
+            </md-menu-bar>
+            <md-nav-bar md-selected-nav-item="currentNavItem" class="menu" nav-bar-aria-label="navigation">
+                <md-nav-item ng-class="{active: currentState.match('^home')}" md-nav-sref="home" name="home" class="menu-list" aria-label="home">Home</md-nav-item>
                 <md-nav-item ng-class="{active: currentState.match('^dyno')}" md-nav-sref="dyno" class="menu-list" name="dyno" aria-label="dyno">Dyno</md-nav-item>
-                </md-nav-bar>
-                <div class="social">
-                    <a href="https://www.facebook.com/ckptuning" target="_blank"><img src="docs/images/002-thumb.png" alt="logo" class="social-logo"> </a>
-                    <a href="http://www.instagram.com/customkings_performance" target="_blank"><img src="docs/images/003-social-media.png" alt="instagram logo, ckp tuning" class="social-logo"> </a>
-                </div>
-            </nav>
-        </header>
-        <main ui-view></main>
-        <footer>&#169 2017 CKPTuning All Rights Reserved | Website by <a href="#">King Pra</a></footer>
-    </body>
+            </md-nav-bar>
+            <div class="social">
+                <a href="https://www.facebook.com/ckptuning" target="_blank"><img src="docs/images/002-thumb.png" alt="logo" class="social-logo"> </a>
+                <a href="http://www.instagram.com/customkings_performance" target="_blank"><img src="docs/images/003-social-media.png" alt="instagram logo, ckp tuning" class="social-logo"> </a>
+            </div>
+        </nav>
+    </header>
+    <main ui-view></main>
+    <footer>&#169 2017 CKPTuning All Rights Reserved | T:704-802-2578 | Website by <a href="#">King Pra</a></footer>
+</body>
+
 </html>
