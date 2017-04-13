@@ -1323,13 +1323,26 @@ md-nav-bar .md-button._md-nav-button.md-unselected {
   @media print, screen and (min-width: 40em) {
       .menu:last-child:not(:first-child) {
         float: right; } }
+  @media print, screen and (min-width: 64em) {
+    .menu {
+      width: 33.33333%;
+      float: left;
+      padding-right: 0.625rem;
+      padding-left: 0.625rem;
+      text-align: right; } }
+  @media print, screen and (min-width: 64em) and (min-width: 40em) {
+    .menu {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  @media print, screen and (min-width: 64em) {
+      .menu:last-child:not(:first-child) {
+        float: right; } }
 
 .mobile-menu {
   width: 83.33333%;
   float: left;
   padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  text-align: right; }
+  padding-left: 0.625rem; }
   @media print, screen and (min-width: 40em) {
     .mobile-menu {
       padding-right: 0.9375rem;
@@ -1349,7 +1362,8 @@ md-nav-bar .md-button._md-nav-button.md-unselected {
       padding-right: 0.625rem;
       padding-left: 0.625rem;
       text-align: right;
-      display: block; } }
+      display: block;
+      margin-top: 15px; } }
   @media print, screen and (min-width: 64em) and (min-width: 40em) {
     .social {
       padding-right: 0.9375rem;

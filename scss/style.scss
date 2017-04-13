@@ -47,13 +47,16 @@ md-nav-bar .md-button._md-nav-button.md-unselected {
         text-align: right;
         display: block;
     }
+    @include breakpoint(large) {
+      @include grid-column(4);
+      text-align: right;
+    }
 
 }
 
 .mobile-menu {
     @include breakpoint(small) {
     @include grid-column(10);
-    text-align: right;
   }
     @include breakpoint(medium) {
         display: none;
@@ -66,6 +69,7 @@ md-nav-bar .md-button._md-nav-button.md-unselected {
         @include grid-column(4);
         text-align: right;
         display: block;
+        margin-top: 15px;
     }
 
 }
